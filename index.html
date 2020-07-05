@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
-  <title>王道</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <h1>Hello</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="王道,博客,个人博客,极简博客">
+    <meta name="description" content="王道个人博客主页,致力于记录叶分享前端编程技术技巧">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>王道</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <button id="btn" class="noselect"><div>Boom</div></button>
+    <script>
+      let btn = document.getElementById('btn');
+      btn.onclick = () =>
+        window.open(
+          'https://juejin.im/user/5bc05db1e51d450e57675000',
+          '_blank'
+        );
+    </script>
+  </body>
 </html>
