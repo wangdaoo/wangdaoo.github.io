@@ -17,17 +17,13 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <button id="btn" class="noselect"><div>Boom</div></button>
-    <script>
-      let btn = document.getElementById('btn');
-      let urlList = [
-        'https://juejin.im/user/5bc05db1e51d450e57675000/posts',
-        'https://github.com/wangdaoo',
-      ];
-      btn.onclick = () =>
-        urlList.forEach((item) => {
-          window.open(item, '_blank');
-        });
-    </script>
+    <button
+      id="btn"
+      class="noselect"
+      target="_blank"
+      onclick="window.open('https://github.com/wangdaoo');"
+    >
+      <div>Boom</div>
+    </button>
   </body>
 </html>
