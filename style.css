@@ -1,82 +1,45 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f1f2f6;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #6DD5FA;
-  background: radial-gradient(circle, #ffffff, #6DD5FA, #2980B9);
-  background: -ms-radial-gradient(circle, #ffffff, #6DD5FA, #2980B9);
-  background: -webkit-linear-gradient(circle, #ffffff, #6DD5FA, #2980B9);
-  background: -moz-linear-gradient(circle, #ffffff, #6DD5FA, #2980B9);
 }
 
-.noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-button {
-  width: 150px;
-  height: 50px;
+.motion-blur {
+  filter: url('#motion-blur');
   cursor: pointer;
-  background: black;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px 0 8px 5px;
-  box-shadow: -8px 8px 5px rgba(0, 0, 0, 0.5);
-  transition: 500ms;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 16px;
+  color: #747d8c;
 }
 
-button div {
-  width: 142px;
-  height: 42px;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.slide-in-left {
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-button:before {
-  height: 42px;
-  width: 5px;
-  border: 4px solid black;
-  background: #ddd;
-  content: '';
-  position: absolute;
-  transform: skewY(-30deg) translateX(-78px) translateY(-42px);
+.slide-in-right {
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-button:after {
-  width: 135px;
-  height: 3px;
-  border: 4px solid black;
-  background: #bbb;
-  content: '';
-  position: absolute;
-  transform: skewX(-55deg) translateY(26px) translateX(32px);
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px) skewX(30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-button:focus {
-  outline: none;
-}
-
-button:hover {
-  transform: translateX(5px) translateY(-5px);
-  box-shadow: -15px 15px 5px rgba(0, 0, 0, 0.5);
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px) skewX(-30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
